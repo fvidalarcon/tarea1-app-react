@@ -1,7 +1,7 @@
 import React,{ Fragment } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import GifSearch from './components/GIfSearch';
+import GifSearch from './components/GifSearch';
 
 const App = () =>(
   <Fragment>

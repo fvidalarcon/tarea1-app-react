@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
+import ToggleButton from '@material-ui/lab/ToggleButton';
 
 const GifSearch = () => {
 
-    const predefinedGifs = ['Dragon Ball', 'Los Simpson', 'Slam Dunk'];
+
+    const [predefinedGifs, setPredefinedGifs] = useState(['Dragon Ball', 'Los Simpson', 'Slam Dunk']);
+
+    const handleAdd = () => {
+        setPredefinedGifs( ['SamuraiX', ...predefinedGifs] );
+
+    }
 
     return(
         <>
-        <h1>Gif</h1>  
+
+        <ToggleButton onClick={ handleAdd }> Add</ToggleButton>
+
 
         <ol>
            {
-               predefinedGifs.map(( gif,i) => {
+               predefinedGifs.map( gif => {
                    return <li key={ gif }> { gif } </li>
                })
            }
